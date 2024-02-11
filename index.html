@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's Day Party Invitation</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;900&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; minimum-scale=1.0; user-scalable=0;" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+
+<script>
+window.addEventListener("load",function() {
+  setTimeout(function(){
+    window.scrollTo(0, 1);
+  }, 0);
+});
+</script>
+</head>
+
+<script defer="defer" src="bundle.bb19a8e4b6b73f64.js"></script>
+<body id="body">
+
+    <div id="welcomeScreen">
+        <img src="hbo.png">
+        <button id="startGameButton">Starta spelet</button>
+    </div>
+
+    <div id="portraits">
+        <div class="portrait" id="portrait1">
+            <img src="1.png">
+            <span>COMBO!</span>
+        </div>
+        <div class="portrait" id="portrait2">
+            <img src="2.png">
+            <span>HALVVÄGS!</span>
+        </div>
+        <div class="portrait" id="portrait3">
+            <img src="3.png">
+            <span>NÄSTAN KLAR!</span>
+        </div>
+        <div class="portrait" id="portrait4">
+            <img src="4.png">
+            <span>KÄMPA PÅ!</span>
+        </div>
+    </div>
+    
+    <canvas id="breakoutCanvas"></canvas>
+    <canvas class="webgl"></canvas>
+    <audio id="music" src="music2.mp3" loop></audio>
+
+    <div id="invitationMessage" style="display:none">
+        <img src="invite.png">
+            <table>
+                <tr>
+                    <td>Datum</td>
+                    <td>🗓️</td>
+                    <td>Fredag 16 februari</td>
+                </tr>
+                <tr></tr>
+                    <td>Tid</td>
+                    <td>⏰</td>
+                    <td>18:30-20:00</td>
+                <tr></tr>
+                <tr></tr>
+                    <td>Plats</td>
+                    <td>🧭</td>
+                    <td>Lilla Aulan</td>
+                <tr></tr>
+                <tr></tr>
+                    <td>Kostnad</td>
+                    <td>💸</td>
+                    <td>50kr*</td>
+                <tr></tr>
+                <tr></tr>
+                    <td>Serveras</td>
+                    <td>🍿</td>
+                    <td>Snacks och dryck</td>
+                <tr></tr>
+            </table>
+        <button style="font-size: smaller;">Tryck för att börja om</button>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+<script>
+    var scroll = window.setInterval(function() { window.scrollTo(0,
+    1) ; }, 2000) ;
+    </script>
+</html>
