@@ -195,7 +195,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
         adjustedDx = dx;
         adjustedDy = dy;
 
-        console.log(dx);
+        // console.log(dx);
 
         const basePaddleWidth = canvas.width / 8; // Adjust base size as needed
         const paddleGrowth = canvas.width / 50; // Adjust growth rate as needed
@@ -205,7 +205,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
         const maxPaddleWidth = canvas.width / 4; // Adjust max size as needed
         paddleWidth = Math.min(paddleWidth, maxPaddleWidth);
 
-        console.log(paddleWidth);
+        // console.log(paddleWidth);
     
         paddleX = (canvas.width - paddleWidth) / 2;
 
@@ -432,7 +432,12 @@ document.addEventListener('DOMContentLoaded', (event) => {
                     if (x > brickX && x < brickRight && y > brickY && y < brickBottom) {
                         consecutiveBrickHits++;
                         if (consecutiveBrickHits >= consecutiveHitsThreshold) {
-                            animatePortrait('portrait1');
+                            // Array of portraits to choose from
+                            const portraits = ['portrait1', 'portrait5', 'portrait6'];
+                            // Randomly select a portrait
+                            const selectedPortrait = portraits[Math.floor(Math.random() * portraits.length)];
+                            console.log("Selected portrait: ", selectedPortrait);
+                            animatePortrait(selectedPortrait);
                             consecutiveBrickHits = 0; // Reset the counter
                         }
                         dy = -dy; // Reverse the ball's vertical direction
@@ -462,7 +467,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
         const clearedPercentage = ((totalBricks - remainingBricks) / totalBricks) * 100;
 
         // Check if 50% of the bricks are cleared and the animation hasn't been triggered yet
-        console.log(clearedPercentage)
+        // console.log(clearedPercentage)
         if (!halfBricksClearedTriggered && clearedPercentage >= 50) {
             animatePortrait('portrait2');
             halfBricksClearedTriggered = true; // Ensure the animation is only triggered once
@@ -522,7 +527,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
                 // No vertical speed adjustment here as it's a side hit, unless you want to add a minor effect
             }
         }
-        console.log(`dx: ${dx}, dy: ${dy}`); // For debugging purposes
+        // console.log(`dx: ${dx}, dy: ${dy}`); // For debugging purposes
     }
     
     function drawBricks() {
