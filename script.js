@@ -262,8 +262,9 @@ document.addEventListener('DOMContentLoaded', (event) => {
         inGameOverSequence = true;
         lossCount++; 
 
-        if (lossCount == 10) {
+        if (lossCount == 5) {
             animatePortrait('portrait4');
+            lossCount = 0;
         }
 
         const canvas = document.getElementById('breakoutCanvas');
