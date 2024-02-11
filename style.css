@@ -31,16 +31,16 @@ body {
     align-items: center;
     text-align: center;
     flex-direction: column;
-    h1 {
-        padding: 0 3rem;
-        font-size:10rem;
-        line-height: 0.5;
-    }
-    p {
-        padding: 0 3rem;
-        font-size: 30px;
-    }
-  }
+}
+h1 {
+    padding: 0 3rem;
+    font-size:10rem;
+    line-height: 0.5;
+}
+p {
+    padding: 0 3rem;
+    font-size: 30px;
+}
 
 #welcomeScreen {
     z-index: 15;
@@ -50,37 +50,38 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100%;
     animation: 2s ease-in 0s 1 fadein;
     filter: drop-shadow(10px 10px 100px #fafcc2);
-    img {
-        width: 100dvw;
-    }
-    button {
-        width: 50%;
-        background-color: #ff256c;
-        border-radius: 10px;
-        padding: 10px 5px;
-        font-family: 'Raleway', sans-serif;
-        font-weight: bold;
-        font-size: 20px;
-        position: relative;
-        overflow: hidden;
-        border: 1px solid rgba(255, 255, 255, 0.2);
-        box-shadow: 0px 5px 15px #000000;
-        color: black;
-    }
-    button::before {
-        animation: shine 2s ease-in-out infinite;
-        content: "";
-        position: absolute;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        left: -100%;
-        overflow: hidden;
-        transition: all 2s ease-in-out;
-        background: linear-gradient( 120deg, transparent, rgba(255, 255, 255, 0.75), transparent);
-    }
+}
+#welcomeScreen img {
+    width: 100%;
+}
+#welcomeScreen button {
+    width: 50%;
+    background-color: #ff256c;
+    border-radius: 10px;
+    padding: 10px 5px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0px 5px 15px #000000;
+    color: black;
+}
+#welcomeScreen button::before {
+    animation: shine 2s ease-in-out infinite;
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    left: -100%;
+    overflow: hidden;
+    transition: all 2s ease-in-out;
+    background: linear-gradient( 120deg, transparent, rgba(255, 255, 255, 0.75), transparent);
 }
 
 @keyframes fadein {
@@ -124,34 +125,34 @@ body {
     font-size: 15px;
     animation: fadein 2s ease-in 0s 1;
     filter: drop-shadow(10px 10px 100px #fafcc2);
-    img {
-        animation: pulsate 0.7s linear 0s infinite;
-        width: 95%;
-    }
     text-align: center;
     color: #fafcc2;
-    table {
-        filter: drop-shadow(0px 2px 5px rgba(0,0,0,075));
-        td {
-            text-align: left;
-            width: 150px;
-            font-weight: bold;
-        }
-        td:nth-of-type(2) {
-            text-align: center;
-            width: 30px;
-            font-size: 25px;
-        }
-        td:first-of-type {
-            width: 150px;
-            text-align: right;
-            font-weight: normal;
-        }
-    }
-    button {
-        margin-top: 20px;
-        color: black;
-    }
+}
+#invitationMessage img {
+    animation: pulsate 0.7s linear 0s infinite;
+    width: 95%;
+}
+#invitationMessage table {
+    filter: drop-shadow(0px 2px 5px rgba(0,0,0,075));
+}
+td {
+    text-align: left;
+    width: 150px;
+    font-weight: bold;
+}
+td:nth-of-type(2) {
+    text-align: center;
+    width: 30px;
+    font-size: 25px;
+}
+td:first-of-type {
+    width: 150px;
+    text-align: right;
+    font-weight: normal;
+}
+#invitationMessage button {
+    margin-top: 20px;
+    color: black;
 }
 
 canvas.webgl {
@@ -164,7 +165,7 @@ canvas.webgl {
     display: block;
     margin: 0 auto;
     /* Adjust these dimensions as needed */
-    width: 100dvw; /* Narrower width */
+    width: 100vw; /* Narrower width */
     height: 100dvh; /* Taller height */
 }
 
@@ -174,40 +175,40 @@ canvas.webgl {
     top: 5%;
     width:100%;
     height: 25vw;
-    .portrait {
-        position: absolute;
-        right: -100%;
-        top: 0;
-        height: 95%;
-        width: 60vw;
-        background: rgba(250,252,194,0.5);
-        z-index: 100;
-        display:flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        align-items: center;
-        filter: drop-shadow(0px 0px 0px #fafcc2);
-        box-shadow: 0px 5px 15px #fafcc2;
-        backdrop-filter: blur(5px);
-        border: 2px solid rgba(255,37,108,0.25);
-        border-radius: 2vw 0 0 2vw;
-        color: #000;
-        font-family: 'Raleway', sans-serif;
-        font-weight: 900;
-        font-size: 5.5vw;
-        span {
-            padding: 2vw;
-        }
-        img {
-            height: 80%;
-            padding: 0 2vw;
-        }
-    }
-    .animated {
-        right: -100%;
-        animation: in 0.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0s, out 0.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) 2s;
-        animation-fill-mode: forwards, forwards;
-    }
+}
+.portrait {
+    position: absolute;
+    right: -100%;
+    top: 0;
+    height: 95%;
+    width: 60vw;
+    background: rgba(250,252,194,0.5);
+    z-index: 100;
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    filter: drop-shadow(0px 0px 0px #fafcc2);
+    box-shadow: 0px 5px 15px #fafcc2;
+    backdrop-filter: blur(5px);
+    border: 2px solid rgba(255,37,108,0.25);
+    border-radius: 2vw 0 0 2vw;
+    color: #000;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 900;
+    font-size: 5.5vw;
+}
+.portrait span {
+    padding: 2vw;
+}
+.portrait img {
+    height: 80%;
+    padding: 0 2vw;
+}
+.animated {
+    right: -100%;
+    animation: in 0.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0s, out 0.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) 2s;
+    animation-fill-mode: forwards, forwards;
 }
 
 @keyframes in {
@@ -241,7 +242,7 @@ canvas#breakoutCanvas {
     display: block;
     margin: 0 auto;
     /* Adjust these dimensions as needed */
-    width: 100dvw; /* Narrower width */
+    width: 100vw; /* Narrower width */
     height: auto;
     aspect-ratio: 2 / 3;
     top: 0;
